@@ -63,6 +63,18 @@ INSERT INTO formation.skill
  (NULL, 'Younes', 'GHEZALI', 23, '2000-12-01', 1, 2)
  ;
 
+-- insertion de données
+INSERT INTO formation.student_skill(
+VALUES
+    (4, 4),
+    (4, 1),
+    (2, 3),
+    (1, 2),
+    (1, 3),
+    (1, 4),
+    (1, 5)
+);
+
 -- MISE A JOUR
 -- UPDATE formation.student
 -- SET 

@@ -31,8 +31,26 @@
 -- ;
 
 --créer des jointures
-SELECT student.*, classroom.name
-FROM formation.student
-JOIN formation.classroom
-ON student.classroom_id = classroom.id
+-- SELECT student.*, classroom.name
+-- FROM formation.student
+-- JOIN formation.classroom
+-- ON student.classroom_id = classroom.id
+-- ;
+
+SELECT
+    student.lastname,
+    student.birthday,
+    skill.name
+FROM
+    formation.student
+JOIN
+    formation.skill
+JOIN
+    formation.student_skill
+ON
+    student_skill.student_id = student.id
+AND
+    student_skill.skill_id = skill.id
+ORDER BY
+    student.lastname
 ;
